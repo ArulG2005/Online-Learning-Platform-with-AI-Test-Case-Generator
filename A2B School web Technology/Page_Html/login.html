@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2B</title>
+    <link rel="stylesheet" href="/Page_Css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="App">
+       
+       <header>
+        <div class="nav">
+            <i class="fa-solid fa-user"></i>
+            <a href="">A<sup>2</sup>B School</a>
+        </div>
+       </header> 
+       <div id="bubble-container"></div>
+       <div class="login">
+        <div class="box">
+            <h1>WELCOME</h1>
+            <div class="input">
+                <input type="email" placeholder="Email" id="email" required>
+                <input type="password"placeholder="Password" id="password" required>
+            </div>
+            <div class="but"> 
+                <button type="submit" onclick="login()">Login</button>
+            </div>
+            <div class="forget">
+                <a href="" id="forgetPasswordLink">Forget Password ?</a>
+            </div>
+            <div class="new">
+                <p>I don't have account ? <a href=""  onclick="createNewAccount()">New User</a></p>
+            </div>
+        </div>
+       </div>
+    </div>
+    <script src="/Page_Script/login.js"></script>
+</body>
+</html>

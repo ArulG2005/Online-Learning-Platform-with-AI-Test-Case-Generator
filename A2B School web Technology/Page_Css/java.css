@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.fa-user {
+    color: white;
+      font-size: 2em;
+      padding-top: 10px;
+      border: 1px white solid;
+      border-radius: 100px;
+      width: 50px;
+      height: 40px;
+      text-align: center;
+}
+.clickable {
+    cursor: pointer;
+}
+
+.clicked {
+    color:rgb(255, 0, 162);
+}
+
+.nav {
+    background-color: green;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    position: fixed;
+    top:0; 
+    left: 0;
+    width: 100%;
+    box-sizing: border-box; 
+    z-index: 1000;
+   
+}
+
+h2{
+    margin-bottom: 30px;
+}
+.content1{
+    line-height: 50px;
+    display: none;
+}
+.App{
+    margin-top: 50px;
+}
+.nav a{
+    text-decoration: none;
+    font-size: 2em;
+    color: white;
+}
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+.command{
+    line-height: 50px;
+}
+.loop{
+    line-height: 50px;
+}
+.ifelse{
+    line-height: 50px;
+}
+.function{
+line-height: 50px;
+}
+.datatype{
+    line-height: 50px;
+}
+.var{
+    line-height: 50px;
+}
+.arr{
+    line-height: 50px;
+}
+.classobj{
+    line-height: 50px;
+}
+.inher{
+    line-height: 50px;
+}
+.pol{
+    line-height: 50px;
+}
+.abs{
+    line-height: 50px;
+}
+.encap{
+    line-height: 50px;
+}
+.inter{
+    line-height: 50px;
+}
+.error{
+    line-height:50px;
+}
+.file{
+    line-height: 50px;
+}
+.gen{
+    line-height: 50px;
+}
+.frame{
+    line-height: 50px;
+}
+.coll{
+    line-height: 50px;
+}
+.concur{
+    line-height: 50px;
+}
+.net{
+    line-height: 50px;
+}
+.thread{
+    line-height: 50px;
+}
+.jdbc{
+line-height: 50px;
+
+}
+
+ul li:hover {
+    color: #ff6600;
+}
+
+
+
+.section {
+    flex: 0 1 calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+}
+.code-space {
+    font-family: monospace;
+    white-space: pre;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 20px 0;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+}
+.code-line {
+    display: block;
+}
+.intro{
+    line-height: 50px;
+}
+#con {
+    width: calc(100% - 100px);     
+    height:85vh;    
+    overflow: auto;   
+    
+}
+#code{
+    width: 100%;       
+    height:85vh;
+    overflow:auto;      
+     
+}
+.syntax{
+    line-height: 50px;
+}
+#sec1 {
+    overflow: auto; 
+    max-height:85vh;
+    max-width: calc(100vh - 460px);
+    
+    
+}
+
+#sec1 ul {
+    margin: 0;
+    padding: 0;
+}
+
+#sec1 ul li {
+    list-style-type: none;
+    line-height: 50px; 
+}

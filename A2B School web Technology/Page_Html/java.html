@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2B</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="/Page_Css/java.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <i class="fa-solid fa-user" id="userIcon"></i>
+            <a href="">A<sup>2</sup>B School</a>
+        </div>
+       </header> 
+       <div class="App">
+        <div class="content">
+            <div class="section" id="sec1">
+                <h2> Java</h2>
+               
+                <ul>
+                    
+                        <li class="clickable">Introduction</li>
+                        <li class="clickable">Java Syntax</li>
+                        <li class="clickable">Java Comments</li>
+                        <li class="clickable">Loops</li>
+                        <li class="clickable">If Statements</li>
+                        <li class="clickable">Functions</li>
+                        <li class="clickable">Data Types</li>
+                        <li class="clickable">Variables</li>
+                        <li class="clickable">Arrays</li>
+                        <li class="clickable">Classes and Objects</li>
+                        <li class="clickable">Inheritance</li>
+                        <li class="clickable">Polymorphism</li>
+                        <li class="clickable">Abstraction</li>
+                        <li class="clickable">Encapsulation</li>
+                        <li class="clickable">Interfaces</li>
+                        <li class="clickable">Exception Handling</li>
+                        <li class="clickable">File Handling</li>
+                        <li class="clickable">Generics</li>
+                        <li class="clickable">Java Collections Framework</li>
+                        <li class="clickable">Concurrency</li>
+                        <li class="clickable">Networking</li>
+                        <li class="clickable">Multithreading</li>
+                        <li class="clickable">Database Connectivity (JDBC)</li>
+                    </ul>
+                    
+                   
+              
+            </div>
+            
+            <div class="section" id="con">
+                <div class="content1">
+                    <h2>Java Introduction</h2>
+                    <p>Java is a popular programming language, created in 1995.</p>
+                    <h2>What is Java?</h2>
+                    <p>It is owned by Oracle, and more than <strong>3 billion</strong> devices run Java.</p>
+                    <p>It is used for:</p>
+                    <ul>
+                        <li>Mobile applications (specially Android apps)</li>
+                        <li>Desktop applications</li>
+                        <li>Web applications</li>
+                        <li>Web servers and application servers</li>
+                        <li>Games</li>
+                        <li>Database connection</li>
+                        <li>And much, much more!</li>
+                        </ul>
+                        <hr>
+                        <h2>Get Started</h2>
+                        <p>It is not necessary to have any prior programming experience.</p>
+                </div>
+               <div class=content1>
+                <h1>Java <span class="color_h1">Syntax</span></h1>
+                
+                <p>In the previous chapter, we created a Java file called <code class="w3-codespan">Main.java</code>, and we used the following code to print "Hello World" to the screen:</p>
+                <pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+                    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                  <span class="token punctuation">}</span>
+                  </code></pre>
+                  <p>
+                    <a target="_blank" class="w3-btn" href="tryjava.asp?filename=demo_helloworld">Try it Yourself »</a>
+                    </p>
+                    <h3>Example explained</h3>
+                    <p>Every line of code that runs in Java must be inside a <code class="w3-codespan">class</code>.
+                        In our example, we named the class <strong>Main</strong>. A class should always start with 
+                        an uppercase first letter.</p>
+                        <p><strong>Note:</strong> Java is case-sensitive: "MyClass" and "myclass" has 
+                            different meaning.</p>
+                            <p>The name of the java file <strong>must match</strong> the class name.
+                                When saving the file, save it using the class name and add ".java" to the end of 
+                                the filename. To run the example above on your computer, make sure that Java is 
+                                properly installed: Go to the <a href="java_getstarted.asp">Get Started Chapter</a> for how to install Java. The output should be:</p>
+                                
+                                <div class="w3-example w3-padding-16">
+                                    <div class="notranslate w3-black w3-padding">
+                                    <code class="notranslate">
+                                    Hello World
+                                    </code>
+                                    </div>
+                                    </div>
+
+               </div>
+               <div class=content1>
+                <h2>Java Comments</h2>
+                <p>Comments in Java are used to explain code and make it more understandable. They are ignored by the compiler.</p>
+                <p>Example:</p>
+                <pre><code>// This is a single-line comment
+            
+            /*
+             * This is a
+             * multi-line comment
+             */
+            
+            /**
+             * Javadoc comments
+             */
+                </code></pre>
+            </div>
+            <div class=content1>
+                <h2>Loops</h2>
+                <p>Loops in Java are used to execute a block of code repeatedly until a specified condition is met. They are essential for repetitive tasks and allow for efficient coding.</p>
+                <p>There are three main types of loops in Java:</p>
+                <ol>
+                    <li><strong>For Loop:</strong> Executes a block of code a specified number of times.</li>
+                    <li><strong>While Loop:</strong> Executes a block of code as long as a specified condition is true.</li>
+                    <li><strong>Do-While Loop:</strong> Similar to the while loop, but it executes the block of code at least once, then repeats the loop as long as the specified condition is true.</li>
+                </ol>
+                <h3>1. For Loop</h3>
+                <p>The <code>for</code> loop is commonly used when the number of iterations is known in advance.</p>
+                <p>Example:</p>
+                <pre><code>for (int i = 0; i &lt; 5; i++) {
+                System.out.println("Iteration: " + i);
+            }
+                </code></pre>
+                <p>This loop will print "Iteration: 0" to "Iteration: 4".</p>
+                
+                <h3>2. While Loop</h3>
+                <p>The <code>while</code> loop repeats a block of code as long as a specified condition is true.</p>
+                <p>Example:</p>
+                <pre><code>int i = 0;
+            while (i &lt; 5) {
+                System.out.println("Iteration: " + i);
+                i++;
+            }
+                </code></pre>
+                <p>This loop will also print "Iteration: 0" to "Iteration: 4".</p>
+                
+                <h3>3. Do-While Loop</h3>
+                <p>The <code>do-while</code> loop is similar to the <code>while</code> loop, but it always executes the block of code at least once, even if the condition is false.</p>
+                <p>Example:</p>
+                <pre><code>int i = 0;
+            do {
+                System.out.println("Iteration: " + i);
+                i++;
+            } while (i &lt; 5);
+                </code></pre>
+                <p>This loop will also print "Iteration: 0" to "Iteration: 4".</p>
+            </div>
+            <div class=content1>
+                <h2>If-Else Statements</h2>
+                <p>In Java, the <code>if</code> statement is used to execute a block of code if a specified condition is true. Optionally, the <code>else</code> statement can be used to execute a block of code if the condition is false.</p>
+                <p>Example:</p>
+                <pre><code>int num = 10;
+            if (num % 2 == 0) {
+                System.out.println("Even number");
+            } else {
+                System.out.println("Odd number");
+            }
+                </code></pre>
+                <p>This code checks if the variable <code>num</code> is even or odd and prints the result accordingly.</p>
+                
+                <h3>Nested If-Else Statements</h3>
+                <p>You can also use nested <code>if-else</code> statements to check multiple conditions.</p>
+                <p>Example:</p>
+                <pre><code>int age = 25;
+            if (age &lt; 18) {
+                System.out.println("You are a minor");
+            } else if (age &lt; 65) {
+                System.out.println("You are an adult");
+            } else {
+                System.out.println("You are a senior citizen");
+            }
+                </code></pre>
+                <p>This code checks the age of a person and prints the appropriate message based on their age.</p>
+                
+                <h3>Switch Statement</h3>
+                <p>The <code>switch</code> statement is used to select one of many code blocks to be executed.</p>
+                <p>Example:</p>
+                <pre><code>int day = 3;
+            switch (day) {
+                case 1:
+                    System.out.println("Monday");
+                    break;
+                case 2:
+                    System.out.println("Tuesday");
+                    break;
+                // Add cases for other days
+                default:
+                    System.out.println("Invalid day");
+            }
+                </code></pre>
+                <p>This code prints the name of the day based on the value of the <code>day</code> variable.</p>
+            </div>
+            <div class=content1>
+                <h2>Functions (Methods)</h2>
+                <p>In Java, functions are called methods. They are blocks of code that perform a specific task and are defined within a class. Methods provide modularity and reusability in your code.</p>
+                <p>Example:</p>
+                <pre><code>public class Example {
+                // Method definition
+                public void greet() {
+                    System.out.println("Hello!");
+                }
+            
+                // Main method
+                public static void main(String[] args) {
+                    Example obj = new Example();
+                    obj.greet(); // Method invocation
+                }
+            }
+                </code></pre>
+                <p>This code defines a method named <code>greet</code> inside a class named <code>Example</code>. The <code>greet</code> method prints "Hello!". The method is then invoked in the <code>main</code> method.</p>
+                
+                <h3>Method Parameters</h3>
+                <p>Methods can take parameters, which are values passed to the method when it is called. Parameters are specified within the parentheses after the method name.</p>
+                <p>Example:</p>
+                <pre><code>public class Example {
+                // Method definition with parameters
+                public void add(int a, int b) {
+                    int sum = a + b;
+                    System.out.println("Sum: " + sum);
+                }
+            
+                // Main method
+                public static void main(String[] args) {
+                    Example obj = new Example();
+                    obj.add(5, 3); // Method invocation with arguments
+                }
+            }
+                </code></pre>
+                <p>This code defines a method named <code>add</code> that takes two parameters <code>a</code> and <code>b</code>. The method calculates the sum of the parameters and prints it. The method is then invoked with arguments <code>5</code> and <code>3</code>.</p>
+                
+                <h3>Return Values</h3>
+                <p>Methods can also return a value after execution. The return type of the method specifies the type of value returned by the method.</p>
+                <p>Example:</p>
+                <pre><code>public class Example {
+                // Method definition with return value
+                public int square(int num) {
+                    return num * num;
+                }
+            
+                // Main method
+                public static void main(String[] args) {
+                    Example obj = new Example();
+                    int result = obj.square(4); // Method invocation with return value
+                    System.out.println("Square: " + result);
+                }
+            }
+                </code></pre>
+                <p>This code defines a method named <code>square</code> that takes an integer parameter <code>num</code> and returns the square of that number. The method is then invoked, and the returned value is printed.</p>
+            </div>
+            <div class=content1>
+                <h2>Data Types</h2>
+                <p>In Java, data types specify the type of data that a variable can hold. Java has two main categories of data types: primitive data types and reference data types.</p>
+                
+                <h3>Primitive Data Types</h3>
+                <p>Primitive data types represent single values and are predefined by the language. They are used to store simple values such as numbers and characters.</p>
+                <ul>
+                    <li><strong>int:</strong> Used to store integer numbers (whole numbers).</li>
+                    <li><strong>double:</strong> Used to store floating-point numbers (numbers with decimal points).</li>
+                    <li><strong>boolean:</strong> Used to store true or false values.</li>
+                    <li><strong>char:</strong> Used to store single characters.</li>
+                </ul>
+                <p>Example:</p>
+                <pre><code>int age = 25;
+            double price = 10.99;
+            boolean isJavaFun = true;
+            char grade = 'A';
+                </code></pre>
+                
+                <h3>Reference Data Types</h3>
+                <p>Reference data types are used to store references (memory addresses) to objects. They do not store the actual data but rather a reference to where the data is stored in memory.</p>
+                <p>Example:</p>
+                <pre><code>String name = "Java";
+            Integer number = new Integer(5);
+                </code></pre>
+                <p>Here, <code>name</code> is a reference to a <code>String</code> object, and <code>number</code> is a reference to an <code>Integer</code> object.</p>
+            </div>
+            <div class=content1>
+                <h2>Variables</h2>
+                <p>In Java, variables are used to store data values. They provide a way to label and reference memory locations in a program.</p>
+                
+                <h3>Variable Declaration</h3>
+                <p>Before using a variable, it must be declared with a specified data type. Variable declaration allocates memory for the variable and associates a name with it.</p>
+                <p>Example:</p>
+                <pre><code>int age; // Declaration of an integer variable named 'age'
+            double price; // Declaration of a double variable named 'price'
+            String name; // Declaration of a String variable named 'name'
+                </code></pre>
+                
+                <h3>Variable Initialization</h3>
+                <p>Initialization is the process of assigning a value to a variable. A variable can be initialized at the time of declaration or later in the program.</p>
+                <p>Example:</p>
+                <pre><code>int age = 25; // Declaration and initialization of an integer variable 'age'
+            double price = 10.99; // Declaration and initialization of a double variable 'price'
+            String name = "Java"; // Declaration and initialization of a String variable 'name'
+                </code></pre>
+                
+                <h3>Variable Scope</h3>
+                <p>The scope of a variable defines where the variable can be accessed in the program. Variables can have different scopes depending on where they are declared.</p>
+                <p>Example:</p>
+                <pre><code>public class Example {
+                // Global variable accessible throughout the class
+                int globalVar = 10;
+            
+                public void method() {
+                    // Local variable accessible only within this method
+                    int localVar = 20;
+                    System.out.println(globalVar); // Accessing globalVar
+                    System.out.println(localVar); // Accessing localVar
+                }
+            
+                public static void main(String[] args) {
+                    Example obj = new Example();
+                    System.out.println(obj.globalVar); // Accessing globalVar outside the class
+                    // System.out.println(obj.localVar); // Error: localVar is not accessible here
+                }
+            }
+                </code></pre>
+                <p>In this example, <code>globalVar</code> is accessible throughout the class, while <code>localVar</code> is only accessible within the <code>method</code> method.</p>
+            </div>
+            <div class=content1>
+                <h2>Arrays</h2>
+                <p>In Java, an array is a data structure that stores a fixed-size sequential collection of elements of the same type. Arrays provide a way to store multiple values under a single variable name.</p>
+                
+                <h3>Array Declaration</h3>
+                <p>To declare an array in Java, you specify the type of elements the array will hold and the array's name, followed by square brackets (<code>[]</code>).</p>
+                <p>Example:</p>
+                <pre><code>// Declaration of an integer array named 'numbers'
+            int[] numbers;
+                </code></pre>
+                
+                <h3>Array Initialization</h3>
+                <p>Arrays can be initialized with values at the time of declaration or later in the program.</p>
+                <p>Example:</p>
+                <pre><code>// Declaration and initialization of an integer array with 3 elements
+            int[] numbers = {1, 2, 3};
+                </code></pre>
+                
+                <h3>Accessing Array Elements</h3>
+                <p>Array elements are accessed using an index, which starts from 0 for the first element and increments by 1 for each subsequent element.</p>
+                <p>Example:</p>
+                <pre><code>int[] numbers = {1, 2, 3};
+            System.out.println(numbers[0]); // Accessing the first element (prints 1)
+            System.out.println(numbers[1]); // Accessing the second element (prints 2)
+            System.out.println(numbers[2]); // Accessing the third element (prints 3)
+                </code></pre>
+                
+                <h3>Array Length</h3>
+                <p>You can find the length of an array using the <code>length</code> property.</p>
+                <p>Example:</p>
+                <pre><code>int[] numbers = {1, 2, 3};
+            System.out.println("Length of the array: " + numbers.length); // Prints the length of the array (3)
+                </code></pre>
+                
+                <h3>Iterating Through an Array</h3>
+                <p>You can use loops to iterate through the elements of an array.</p>
+                <p>Example:</p>
+                <pre><code>int[] numbers = {1, 2, 3};
+            for (int i = 0; i &lt; numbers.length; i++) {
+                System.out.println("Element at index " + i + ": " + numbers[i]);
+            }
+                </code></pre>
+                <p>This code will print each element of the array along with its index.</p>
+            </div>
+            
+            <div class=content1>
+                <h2>Classes and Objects</h2>
+                <p>In Java, a class is a blueprint for creating objects. An object is an instance of a class. Classes define the properties and behaviors (methods) of objects.</p>
+                
+                <h3>Class Declaration</h3>
+                <p>To declare a class in Java, you use the <code>class</code> keyword followed by the class name.</p>
+                <p>Example:</p>
+                <pre><code>public class Car {
+                // Class definition
+            }
+                </code></pre>
+                
+                <h3>Object Creation</h3>
+                <p>To create an object of a class, you use the <code>new</code> keyword followed by the class name and parentheses (if there are no constructor arguments).</p>
+                <p>Example:</p>
+                <pre><code>Car myCar = new Car();
+                </code></pre>
+                
+                <h3>Instance Variables</h3>
+                <p>Instance variables are variables declared within a class but outside any method. Each object of the class has its own copy of the instance variables.</p>
+                <p>Example:</p>
+                <pre><code>public class Car {
+                String brand;
+                int year;
+            }
+                </code></pre>
+                
+                <h3>Methods</h3>
+                <p>Methods are functions defined within a class. They define the behaviors of objects of the class.</p>
+                <p>Example:</p>
+                <pre><code>public class Car {
+                String brand;
+                int year;
+            
+                public void drive() {
+                    System.out.println("Driving...");
+                }
+            }
+                </code></pre>
+                
+                <h3>Accessing Class Members</h3>
+                <p>You can access instance variables and methods of a class using the dot (.) operator with the object name.</p>
+                <p>Example:</p>
+                <pre><code>Car myCar = new Car();
+            myCar.brand = "Toyota";
+            myCar.year = 2022;
+            myCar.drive(); // Calls the drive method
+                </code></pre>
+                
+                <h3>Constructor</h3>
+                <p>A constructor is a special method used to initialize objects. It has the same name as the class and no return type.</p>
+                <p>Example:</p>
+                <pre><code>public class Car {
+                String brand;
+                int year;
+            
+                // Constructor
+                public Car(String b, int y) {
+                    brand = b;
+                    year = y;
+                }
+            }
+            
+            // Creating an object with constructor arguments
+            Car myCar = new Car("Toyota", 2022);
+                </code></pre>
+                
+                <h3>Instance vs. Static Members</h3>
+                <p>Instance members (variables and methods) belong to individual objects, whereas static members belong to the class itself.</p>
+                <p>Example:</p>
+                <pre><code>public class Car {
+                static int count;
+                String brand;
+            
+                public Car(String b) {
+                    brand = b;
+                    count++;
+                }
+            }
+                </code></pre>
+                <p>In this example, <code>count</code> is a static variable that keeps track of the number of cars created.</p>
+            </div>
+            <div class=content1>
+                <h2>Inheritance</h2>
+                <p>In Java, inheritance is a mechanism in which one class inherits the properties and behaviors (methods) of another class. The class that inherits is called the subclass or derived class, and the class that is inherited from is called the superclass or base class.</p>
+                
+                <h3>Superclass and Subclass</h3>
+                <p>To establish inheritance, you use the <code>extends</code> keyword to indicate that a class is a subclass of another class.</p>
+                <p>Example:</p>
+                <pre><code>// Superclass
+            public class Animal {
+                public void eat() {
+                    System.out.println("Eating...");
+                }
+            }
+            
+            // Subclass inheriting from Animal
+            public class Dog extends Animal {
+                public void bark() {
+                    System.out.println("Barking...");
+                }
+            }
+                </code></pre>
+                
+                <h3>Accessing Superclass Members</h3>
+                <p>A subclass can access the members (fields and methods) of its superclass using the <code>super</code> keyword.</p>
+                <p>Example:</p>
+                <pre><code>public class Dog extends Animal {
+                public void bark() {
+                    System.out.println("Barking...");
+                    super.eat(); // Call eat method of superclass
+                }
+            }
+                </code></pre>
+                
+                <h3>Method Overriding</h3>
+                <p>Subclasses can provide their own implementation for the methods inherited from the superclass. This is known as method overriding.</p>
+                <p>Example:</p>
+                <pre><code>// Superclass
+            public class Animal {
+                public void makeSound() {
+                    System.out.println("Animal makes a sound");
+                }
+            }
+            
+            // Subclass overriding makeSound method
+            public class Dog extends Animal {
+                @Override
+                public void makeSound() {
+                    System.out.println("Dog barks");
+                }
+            }
+                </code></pre>
+                
+                <h3>Constructors in Inheritance</h3>
+                <p>When a subclass object is created, the constructor of both the superclass and subclass are called. If the superclass has a parameterized constructor, the subclass constructor must explicitly call it using the <code>super</code> keyword.</p>
+                <p>Example:</p>
+                <pre><code>// Superclass with parameterized constructor
+            public class Animal {
+                public Animal(String type) {
+                    System.out.println("Animal type: " + type);
+                }
+            }
+            
+            // Subclass calling superclass constructor
+            public class Dog extends Animal {
+                public Dog(String type) {
+                    super(type); // Call superclass constructor
+                    System.out.println("Dog type: " + type);
+                }
+            }
+                </code></pre>
+            </div>
+            <div class=content1>
+                <h2>Polymorphism</h2>
+                <p>In Java, polymorphism refers to the ability of a reference variable to hold objects of multiple types, and the method that gets called is determined by the object's type at runtime. There are two types of polymorphism in Java: compile-time (static) polymorphism and runtime (dynamic) polymorphism.</p>
+                
+                <h3>Compile-Time Polymorphism</h3>
+                <p>Compile-time polymorphism is achieved through method overloading, where multiple methods with the same name but different parameters are defined within the same class.</p>
+                <p>Example:</p>
+                <pre><code>public class Calculator {
+                // Method overloading
+                public int add(int a, int b) {
+                    return a + b;
+                }
+            
+                public double add(double a, double b) {
+                    return a + b;
+                }
+            }
+                </code></pre>
+                
+                <h3>Runtime Polymorphism</h3>
+                <p>Runtime polymorphism is achieved through method overriding, where a method in a subclass has the same signature (name and parameters) as a method in its superclass.</p>
+                <p>Example:</p>
+                <pre><code>// Superclass
+            public class Animal {
+                public void makeSound() {
+                    System.out.println("Animal makes a sound");
+                }
+            }
+            
+            // Subclass overriding makeSound method
+            public class Dog extends Animal {
+                @Override
+                public void makeSound() {
+                    System.out.println("Dog barks");
+                }
+            }
+                </code></pre>
+                
+                <h3>Polymorphic Behavior</h3>
+                <p>Polymorphic behavior allows a reference variable of a superclass to refer to objects of its subclasses, and the appropriate method is called based on the actual object type at runtime.</p>
+                <p>Example:</p>
+                <pre><code>Animal myAnimal = new Dog();
+            myAnimal.makeSound(); // Calls makeSound method of Dog class
+                </code></pre>
+                <p>In this example, the <code>makeSound</code> method of the <code>Dog</code> class is called even though the reference variable is of type <code>Animal</code>. This is polymorphic behavior.</p>
+            </div>
+            <div class=content1>
+                <h2>Abstraction</h2>
+                <p>In Java, abstraction is the concept of hiding the complex implementation details and showing only the essential features of an object. Abstraction can be achieved through abstract classes and interfaces.</p>
+                
+                <h3>Abstract Classes</h3>
+                <p>An abstract class is a class that cannot be instantiated and may contain abstract methods, which are declared but not implemented in the abstract class. Abstract methods must be implemented by subclasses.</p>
+                <p>Example:</p>
+                <pre><code>// Abstract class
+            public abstract class Shape {
+                // Abstract method
+                public abstract double area();
+            }
+            
+            // Concrete subclass implementing abstract method
+            public class Circle extends Shape {
+                private double radius;
+            
+                public Circle(double radius) {
+                    this.radius = radius;
+                }
+            
+                @Override
+                public double area() {
+                    return Math.PI * radius * radius;
+                }
+            }
+                </code></pre>
+                
+                <h3>Interfaces</h3>
+                <p>An interface is a reference type similar to a class that contains only abstract methods, constants, and default methods. Classes can implement interfaces to provide specific behavior.</p>
+                <p>Example:</p>
+                <pre><code>// Interface
+            public interface Vehicle {
+                void start();
+                void accelerate();
+                void stop();
+            }
+            
+            // Class implementing interface
+            public class Car implements Vehicle {
+                @Override
+                public void start() {
+                    System.out.println("Car started");
+                }
+            
+                @Override
+                public void accelerate() {
+                    System.out.println("Car accelerating");
+                }
+            
+                @Override
+                public void stop() {
+                    System.out.println("Car stopped");
+                }
+            }
+                </code></pre>
+                
+                <h3>Benefits of Abstraction</h3>
+                <ul>
+                    <li><strong>Encapsulation:</strong> Abstraction helps in hiding the internal details and representing only the essential features of an object.</li>
+                    <li><strong>Code Reusability:</strong> Abstract classes and interfaces promote code reusability by allowing multiple classes to implement common behaviors.</li>
+                    <li><strong>Flexibility:</strong> Abstraction provides flexibility in design by allowing changes to be made in the implementation without affecting the code that uses the abstraction.</li>
+                </ul>
+            </div>
+            <div class=content1>
+                <h2>Encapsulation</h2>
+                <p>In Java, encapsulation is the mechanism of wrapping the data (variables) and code (methods) together as a single unit. It involves bundling the data and methods that operate on the data within a class and controlling access to them through access modifiers.</p>
+                
+                <h3>Access Modifiers</h3>
+                <p>Java provides four access modifiers to control the access level of classes, variables, constructors, and methods:</p>
+                <ul>
+                    <li><strong>private:</strong> Accessible only within the same class.</li>
+                    <li><strong>default (no modifier):</strong> Accessible only within the same package.</li>
+                    <li><strong>protected:</strong> Accessible within the same package and subclasses (even if they are in a different package).</li>
+                    <li><strong>public:</strong> Accessible from anywhere.</li>
+                </ul>
+                
+                <h3>Encapsulation with Getters and Setters</h3>
+                <p>Encapsulation is often achieved by providing getter and setter methods to access and modify the private data members of a class, respectively.</p>
+                <p>Example:</p>
+                <pre><code>public class Person {
+                private String name;
+                private int age;
+            
+                // Getter method for name
+                public String getName() {
+                    return name;
+                }
+            
+                // Setter method for name
+                public void setName(String name) {
+                    this.name = name;
+                }
+            
+                // Getter method for age
+                public int getAge() {
+                    return age;
+                }
+            
+                // Setter method for age
+                public void setAge(int age) {
+                    if (age >= 0) {
+                        this.age = age;
+                    } else {
+                        System.out.println("Invalid age");
+                    }
+                }
+            }
+                </code></pre>
+                
+                <h3>Benefits of Encapsulation</h3>
+                <ul>
+                    <li><strong>Data Hiding:</strong> Encapsulation hides the internal details of a class from outside interference, preventing unauthorized access and modification of data.</li>
+                    <li><strong>Controlled Access:</strong> Encapsulation allows access to data only through specified methods (getters and setters), enabling better control over data manipulation.</li>
+                    <li><strong>Modularity:</strong> Encapsulation promotes modularity by grouping related data and methods together within a class, making the code more organized and easier to maintain.</li>
+                </ul>
+            </div>
+            <div class=content1>
+                <h2>Interfaces</h2>
+                <p>In Java, an interface is a reference type similar to a class that contains only abstract methods, constants, and default methods. It defines a contract for classes to implement, specifying a set of methods that implementing classes must provide.</p>
+                
+                <h3>Interface Declaration</h3>
+                <p>To declare an interface in Java, you use the <code>interface</code> keyword followed by the interface name.</p>
+                <p>Example:</p>
+                <pre><code>// Interface declaration
+            public interface Drawable {
+                void draw(); // Abstract method
+            }
+                </code></pre>
+                
+                <h3>Implementing an Interface</h3>
+                <p>Classes can implement interfaces by using the <code>implements</code> keyword, and they must provide implementations for all the abstract methods declared in the interface.</p>
+                <p>Example:</p>
+                <pre><code>// Class implementing the Drawable interface
+            public class Circle implements Drawable {
+                @Override
+                public void draw() {
+                    System.out.println("Drawing a circle");
+                }
+            }
+                </code></pre>
+                
+                <h3>Interface Constants</h3>
+                <p>Interfaces can contain constants, which are implicitly <code>public</code>, <code>static</code>, and <code>final</code>.</p>
+                <p>Example:</p>
+                <pre><code>// Interface with constant
+            public interface Constants {
+                int MAX_VALUE = 100;
+            }
+                </code></pre>
+                
+                <h3>Default Methods</h3>
+                <p>Java 8 introduced default methods in interfaces, allowing interface methods to have a default implementation. Classes implementing the interface can use the default implementation or override it if needed.</p>
+                <p>Example:</p>
+                <pre><code>// Interface with default method
+            public interface Vehicle {
+                void start();
+            
+                default void stop() {
+                    System.out.println("Vehicle stopped");
+                }
+            }
+                </code></pre>
+            </div>
+            <div class=content1>
+                <h2>Error Handling</h2>
+                <p>In Java, error handling refers to the process of managing exceptions that occur during the execution of a program. Exceptions are objects that represent exceptional conditions that can occur during the execution of a program.</p>
+                
+                <h3>Types of Exceptions</h3>
+                <p>There are two main types of exceptions in Java:</p>
+                <ul>
+                    <li><strong>Checked Exceptions:</strong> Checked exceptions are checked at compile time and must be caught or declared in the method signature using the <code>throws</code> keyword.</li>
+                    <li><strong>Unchecked Exceptions (Runtime Exceptions):</strong> Unchecked exceptions are not checked at compile time and can be caught or left to propagate up the call stack.</li>
+                </ul>
+                
+                <h3>Exception Handling</h3>
+                <p>Exception handling in Java is done using try-catch blocks. The <code>try</code> block contains the code that may throw an exception, and the <code>catch</code> block catches and handles the exception.</p>
+                <p>Example:</p>
+                <pre><code>try {
+                // Code that may throw an exception
+                int result = 10 / 0; // This will throw ArithmeticException
+            } catch (ArithmeticException e) {
+                // Exception handling
+                System.out.println("An error occurred: " + e.getMessage());
+            }
+                </code></pre>
+                
+                <h3>Finally Block</h3>
+                <p>The <code>finally</code> block is used to execute code that should always be executed, regardless of whether an exception occurs or not. It is often used for cleanup operations such as closing resources.</p>
+                <p>Example:</p>
+                <pre><code>try {
+                // Code that may throw an exception
+                // ...
+            } catch (Exception e) {
+                // Exception handling
+                // ...
+            } finally {
+                // Cleanup code
+                // ...
+            }
+                </code></pre>
+                
+                <h3>Throwing Exceptions</h3>
+                <p>You can manually throw exceptions using the <code>throw</code> keyword. This is useful for signaling exceptional conditions in your code.</p>
+                <p>Example:</p>
+                <pre><code>public void withdraw(double amount) throws InsufficientBalanceException {
+                if (amount > balance) {
+                    throw new InsufficientBalanceException("Insufficient balance");
+                }
+                // Withdraw logic
+            }
+                </code></pre>
+            </div>
+            <div class=content1>
+                <h2>File Handling</h2>
+                <p>In Java, file handling refers to reading from and writing to files on the file system. Java provides several classes and interfaces in the <code>java.io</code> package for working with files.</p>
+                
+                <h3>Reading from a File</h3>
+                <p>To read from a file in Java, you typically use <code>FileInputStream</code> or <code>BufferedReader</code> classes. You open a file, read its contents, and then close the file.</p>
+                <p>Example using <code>BufferedReader</code>:</p>
+                <pre><code>import java.io.BufferedReader;
+            import java.io.FileReader;
+            import java.io.IOException;
+            
+            public class ReadFile {
+                public static void main(String[] args) {
+                    try (BufferedReader reader = new BufferedReader(new FileReader("filename.txt"))) {
+                        String line;
+                        while ((line = reader.readLine()) != null) {
+                            System.out.println(line);
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+                </code></pre>
+                
+                <h3>Writing to a File</h3>
+                <p>To write to a file in Java, you typically use <code>FileOutputStream</code> or <code>BufferedWriter</code> classes. You open a file, write data to it, and then close the file.</p>
+                <p>Example using <code>BufferedWriter</code>:</p>
+                <pre><code>import java.io.BufferedWriter;
+            import java.io.FileWriter;
+            import java.io.IOException;
+            
+            public class WriteFile {
+                public static void main(String[] args) {
+                    try (BufferedWriter writer = new BufferedWriter(new FileWriter("filename.txt"))) {
+                        writer.write("Hello, world!");
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+                </code></pre>
+                
+                <h3>Working with Directories</h3>
+                <p>You can also create, delete, and manipulate directories in Java using the <code>File</code> class.</p>
+                <p>Example:</p>
+                <pre><code>import java.io.File;
+            
+            public class DirectoryExample {
+                public static void main(String[] args) {
+                    File directory = new File("directoryName");
+                    if (!directory.exists()) {
+                        if (directory.mkdir()) {
+                            System.out.println("Directory created successfully");
+                        } else {
+                            System.out.println("Failed to create directory");
+                        }
+                    }
+                }
+            }
+                </code></pre>
+            </div>
+            <div class=content1>
+                <h2>Generics</h2>
+                <p>In Java, generics provide a way to create classes, interfaces, and methods that operate on objects of specified types (parameters) without having to define the actual type until the time of use. Generics enable you to write more flexible and reusable code.</p>
+                
+                <h3>Generic Classes</h3>
+                <p>A generic class is a class that has one or more type parameters enclosed in angle brackets (<code>&lt;</code> and <code>&gt;</code>). These type parameters can be used as placeholders for the actual types when the class is used.</p>
+                <p>Example:</p>
+                <pre><code>public class Box&lt;T&gt; {
+                private T value;
+            
+                public void setValue(T value) {
+                    this.value = value;
+                }
+            
+                public T getValue() {
+                    return value;
+                }
+            }
+                </code></pre>
+                
+                <h3>Using Generic Classes</h3>
+                <p>To use a generic class, you specify the actual type when creating an object of the class.</p>
+                <p>Example:</p>
+                <pre><code>Box&lt;Integer&gt; intBox = new Box&lt;&gt;();
+            intBox.setValue(10);
+            int value = intBox.getValue(); // No casting required
+                </code></pre>
+                
+                <h3>Generic Methods</h3>
+                <p>Similar to generic classes, you can also define generic methods that have their own type parameters.</p>
+                <p>Example:</p>
+                <pre><code>public class Util {
+                public &lt;T&gt; T add(T a, T b) {
+                    return a + b; // This won't compile for all types T
+                }
+            }
+                </code></pre>
+                
+                <h3>Generic Interfaces</h3>
+                <p>Interfaces can also be generic, allowing you to create more flexible interfaces that can work with different types.</p>
+                <p>Example:</p>
+                <pre><code>public interface List&lt;E&gt; {
+                void add(E element);
+                E get(int index);
+            }
+                </code></pre>
+                
+                <h3>Generic Wildcards</h3>
+                <p>Generics also support wildcard types, which are used to represent an unknown type or a specific type that is a supertype of all other types.</p>
+                <p>Example:</p>
+                <pre><code>public void printList(List&lt;? extends Number&gt; list) {
+                for (Number n : list) {
+                    System.out.println(n);
+                }
+            }
+                </code></pre>
+            </div>
+            <div class=content1>
+                <h2>Java Collections Framework</h2>
+                <p>In Java, the Collections Framework provides a set of interfaces and classes for working with collections of objects. It includes various types of collections such as lists, sets, queues, and maps, along with algorithms for manipulating them.</p>
+                
+                <h3>Collection Interfaces</h3>
+                <p>The core interfaces in the Collections Framework are:</p>
+                <ul>
+                    <li><strong>List:</strong> Ordered collection of elements with duplicates allowed (e.g., <code>ArrayList</code>, <code>LinkedList</code>).</li>
+                    <li><strong>Set:</strong> Unordered collection of unique elements (e.g., <code>HashSet</code>, <code>TreeSet</code>).</li>
+                    <li><strong>Queue:</strong> Collection used to hold elements prior to processing (e.g., <code>PriorityQueue</code>, <code>LinkedList</code>).</li>
+                    <li><strong>Map:</strong> Key-value pairs where each key is unique (e.g., <code>HashMap</code>, <code>TreeMap</code>).</li>
+                </ul>
+                
+                <h3>Using Collections</h3>
+                <p>To use collections, you create objects of the appropriate classes and use their methods to add, remove, and manipulate elements.</p>
+                <p>Example of using <code>ArrayList</code>:</p>
+                <pre><code>import java.util.ArrayList;
+            import java.util.List;
+            
+            public class Main {
+                public static void main(String[] args) {
+                    List&lt;String&gt; list = new ArrayList&lt;&gt;();
+                    list.add("Java");
+                    list.add("Python");
+                    list.add("C++");
+            
+                    System.out.println("Elements in the list:");
+                    for (String element : list) {
+                        System.out.println(element);
+                    }
+                }
+            }
+                </code></pre>
+                
+                <h3>Sorting Collections</h3>
+                <p>You can sort collections using the <code>sort()</code> method of the <code>Collections</code> class, passing the collection as an argument.</p>
+                <p>Example:</p>
+                <pre><code>import java.util.ArrayList;
+            import java.util.Collections;
+            import java.util.List;
+            
+            public class Main {
+                public static void main(String[] args) {
+                    List&lt;Integer&gt; numbers = new ArrayList&lt;&gt;();
+                    numbers.add(5);
+                    numbers.add(2);
+                    numbers.add(8);
+            
+                    Collections.sort(numbers);
+            
+                    System.out.println("Sorted numbers:");
+                    for (int num : numbers) {
+                        System.out.println(num);
+                    }
+                }
+            }
+                </code></pre>
+                
+                <h3>Iterating Over Collections</h3>
+                <p>You can iterate over collections using iterators, enhanced for loops, or forEach method (introduced in Java 8).</p>
+                <p>Example:</p>
+                <pre><code>List&lt;String&gt; names = new ArrayList&lt;&gt;();
+            // Add elements to the list
+            // Iterate using enhanced for loop
+            for (String name : names) {
+                System.out.println(name);
+            }
+            
+            // Iterate using iterator
+            Iterator&lt;String&gt; iterator = names.iterator();
+            while (iterator.hasNext()) {
+                String name = iterator.next();
+                System.out.println(name);
+            }
+            
+            // Iterate using forEach method
+            names.forEach(name -&gt; System.out.println(name));
+                </code></pre>
+            </div>
+            <div class=content1>
+                <h2>Java Standard Edition (Java SE) Framework</h2>
+                <p>The Java Standard Edition (Java SE) framework, also known as the Java Development Kit (JDK), provides the core functionality and libraries for developing Java applications. It includes:</p>
+                
+                <h3>Java Development Kit (JDK)</h3>
+                <p>The JDK is a software development kit used to develop Java applications. It includes the Java Runtime Environment (JRE), compilers, debuggers, and other tools necessary for Java development.</p>
+                
+                <h3>Java Virtual Machine (JVM)</h3>
+                <p>The JVM is an abstract computing machine that runs Java bytecode. It provides a runtime environment for executing Java applications and enables platform independence by abstracting hardware and operating system differences.</p>
+                
+                <h3>Core Libraries</h3>
+                <p>The Java core libraries provide essential classes and interfaces for common programming tasks, such as string manipulation, input/output operations, networking, concurrency, and data structures.</p>
+                
+                <h3>Language Features</h3>
+                <p>Java SE includes language features such as object-oriented programming, exception handling, generics, annotations, lambda expressions (introduced in Java 8), and module system (introduced in Java 9).</p>
+                
+                <h3>Development Tools</h3>
+                <p>Java SE provides development tools such as the Java Development Kit (JDK), which includes the Java compiler (<code>javac</code>), Java Virtual Machine (JVM), and various debugging and profiling tools.</p>
+            </div>
+            <div class=content1>
+                <h2>Concurrency in Java</h2>
+                <p>Concurrency in Java refers to the ability of a program to perform multiple tasks simultaneously. Java provides several mechanisms for concurrent programming, including threads, executors, and synchronization.</p>
+                
+                <h3>Threads</h3>
+                <p>A thread is the smallest unit of execution within a process. In Java, you can create and manage threads using the <code>Thread</code> class or by implementing the <code>Runnable</code> interface and passing it to a <code>Thread</code> object.</p>
+                <p>Example using <code>Thread</code> class:</p>
+                <pre><code>class MyThread extends Thread {
+                public void run() {
+                    // Code to be executed in a separate thread
+                }
+            }
+            
+            // Create and start a thread
+            MyThread thread = new MyThread();
+            thread.start();
+                </code></pre>
+                <p>Example using <code>Runnable</code> interface:</p>
+                <pre><code>class MyRunnable implements Runnable {
+                public void run() {
+                    // Code to be executed in a separate thread
+                }
+            }
+            
+            // Create a Runnable object and pass it to a Thread object
+            Thread thread = new Thread(new MyRunnable());
+            thread.start();
+                </code></pre>
+                
+                <h3>Executors</h3>
+                <p>The <code>java.util.concurrent</code> package provides the <code>Executor</code> framework for executing tasks asynchronously in a thread pool. It includes various executor implementations such as <code>ExecutorService</code>, <code>ScheduledExecutorService</code>, and <code>ForkJoinPool</code>.</p>
+                <p>Example using <code>ExecutorService</code>:</p>
+                <pre><code>ExecutorService executor = Executors.newFixedThreadPool(5);
+            executor.submit(() -&gt; {
+                // Task to be executed asynchronously
+            });
+            executor.shutdown(); // Shutdown the executor after use
+                </code></pre>
+                
+                <h3>Synchronization</h3>
+                <p>Concurrency issues such as race conditions and data inconsistency can arise when multiple threads access shared resources concurrently. Synchronization in Java prevents such issues by restricting access to shared resources using synchronized blocks or methods.</p>
+                <p>Example using synchronized method:</p>
+                <pre><code>class Counter {
+                private int count;
+            
+                public synchronized void increment() {
+                    count++;
+                }
+            }
+                </code></pre>
+                <p>Example using synchronized block:</p>
+                <pre><code>class Counter {
+                private int count;
+            
+                public void increment() {
+                    synchronized (this) {
+                        count++;
+                    }
+                }
+            }
+                </code></pre>
+            </div>
+            <div class=content1>
+                <h2>Networking in Java</h2>
+                <p>Networking in Java refers to the ability to create networked applications that communicate over the Internet or an intranet. Java provides a rich set of classes and APIs for building networked applications, including support for sockets, URLs, and HTTP connections.</p>
+                
+                <h3>Socket Programming</h3>
+                <p>Socket programming in Java enables communication between two endpoints over a network. Java supports both TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) sockets.</p>
+                <p>Example of TCP client:</p>
+                <pre><code>import java.io.*;
+            import java.net.*;
+            
+            public class TCPClient {
+                public static void main(String[] args) {
+                    try {
+                        Socket socket = new Socket("hostname", 1234);
+                        PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+                        BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                        
+                        out.println("Hello, server");
+                        String response = in.readLine();
+                        System.out.println("Server response: " + response);
+                        
+                        socket.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+                </code></pre>
+                <p>Example of TCP server:</p>
+                <pre><code>import java.io.*;
+            import java.net.*;
+            
+            public class TCPServer {
+                public static void main(String[] args) {
+                    try {
+                        ServerSocket serverSocket = new ServerSocket(1234);
+                        System.out.println("Server started");
+            
+                        Socket clientSocket = serverSocket.accept();
+                        PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
+                        BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+            
+                        String inputLine;
+                        while ((inputLine = in.readLine()) != null) {
+                            System.out.println("Client: " + inputLine);
+                            out.println("Message received: " + inputLine);
+                        }
+            
+                        clientSocket.close();
+                        serverSocket.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+                </code></pre>
+                
+                <h3>URL and HTTP Connections</h3>
+                <p>The <code>java.net</code> package provides classes for working with URLs and making HTTP connections. You can retrieve data from a URL, open HTTP connections, and perform HTTP requests.</p>
+                <p>Example of reading data from a URL:</p>
+                <pre><code>import java.io.*;
+            import java.net.*;
+            
+            public class URLReader {
+                public static void main(String[] args) {
+                    try {
+                        URL url = new URL("https://www.example.com");
+                        BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
+            
+                        String inputLine;
+                        while ((inputLine = reader.readLine()) != null) {
+                            System.out.println(inputLine);
+                        }
+            
+                        reader.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+                </code></pre>
+            </div>
+            <div class=content1>
+                <h2>Multithreading in Java</h2>
+                <p>Multithreading in Java allows multiple threads of execution to run concurrently within a single process. It enables you to write more efficient and responsive applications by taking advantage of modern multicore processors.</p>
+                
+                <h3>Creating Threads</h3>
+                <p>You can create threads in Java by extending the <code>Thread</code> class or implementing the <code>Runnable</code> interface.</p>
+                <p>Example using <code>Thread</code> class:</p>
+                <pre><code>class MyThread extends Thread {
+                public void run() {
+                    // Code to be executed in a separate thread
+                }
+            }
+            
+            // Create and start a thread
+            MyThread thread = new MyThread();
+            thread.start();
+                </code></pre>
+                <p>Example using <code>Runnable</code> interface:</p>
+                <pre><code>class MyRunnable implements Runnable {
+                public void run() {
+                    // Code to be executed in a separate thread
+                }
+            }
+            
+            // Create a Runnable object and pass it to a Thread object
+            Thread thread = new Thread(new MyRunnable());
+            thread.start();
+                </code></pre>
+                
+                <h3>Synchronizing Threads</h3>
+                <p>Concurrency issues such as race conditions and data inconsistency can arise when multiple threads access shared resources concurrently. Synchronization in Java prevents such issues by restricting access to shared resources using synchronized blocks or methods.</p>
+                <p>Example using synchronized method:</p>
+                <pre><code>class Counter {
+                private int count;
+            
+                public synchronized void increment() {
+                    count++;
+                }
+            }
+                </code></pre>
+                <p>Example using synchronized block:</p>
+                <pre><code>class Counter {
+                private int count;
+            
+                public void increment() {
+                    synchronized (this) {
+                        count++;
+                    }
+                }
+            }
+                </code></pre>
+                
+                <h3>Thread Pools</h3>
+                <p>Thread pools in Java manage a pool of worker threads that can execute submitted tasks asynchronously. They improve performance by reusing threads and reducing thread creation overhead.</p>
+                <p>Example using <code>ExecutorService</code> thread pool:</p>
+                <pre><code>ExecutorService executor = Executors.newFixedThreadPool(5);
+            executor.submit(() -&gt; {
+                // Task to be executed asynchronously
+            });
+            executor.shutdown(); // Shutdown the executor after use
+                </code></pre>
+            </div>
+            <div class=content1>
+                <h2>Database Connectivity in Java</h2>
+                <p>Database connectivity in Java allows Java applications to interact with databases for storing, retrieving, and manipulating data. Java provides the JDBC (Java Database Connectivity) API for connecting Java applications with databases.</p>
+                
+                <h3>Connecting to a Database</h3>
+                <p>To connect to a database using JDBC, you need to load the appropriate database driver and establish a connection using a connection URL, username, and password.</p>
+                <p>Example:</p>
+                <pre><code>import java.sql.Connection;
+            import java.sql.DriverManager;
+            import java.sql.SQLException;
+            
+            public class DBConnection {
+                public static void main(String[] args) {
+                    String url = "jdbc:mysql://localhost:3306/mydatabase";
+                    String username = "username";
+                    String password = "password";
+            
+                    try {
+                        Connection connection = DriverManager.getConnection(url, username, password);
+                        System.out.println("Connected to the database");
+                        // Perform database operations...
+                        connection.close(); // Close the connection when done
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+                </code></pre>
+                
+                <h3>Executing SQL Queries</h3>
+                <p>Once connected, you can execute SQL queries using <code>Statement</code> or <code>PreparedStatement</code> objects.</p>
+                <p>Example of executing a SQL query:</p>
+                <pre><code>import java.sql.Connection;
+            import java.sql.DriverManager;
+            import java.sql.ResultSet;
+            import java.sql.SQLException;
+            import java.sql.Statement;
+            
+            public class DBQuery {
+                public static void main(String[] args) {
+                    String url = "jdbc:mysql://localhost:3306/mydatabase";
+                    String username = "username";
+                    String password = "password";
+            
+                    try {
+                        Connection connection = DriverManager.getConnection(url, username, password);
+                        Statement statement = connection.createStatement();
+                        ResultSet resultSet = statement.executeQuery("SELECT * FROM users");
+                        
+                        while (resultSet.next()) {
+                            String name = resultSet.getString("name");
+                            int age = resultSet.getInt("age");
+                            System.out.println("Name: " + name + ", Age: " + age);
+                        }
+                        
+                        resultSet.close();
+                        statement.close();
+                        connection.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+                </code></pre>
+                
+                <h3>Handling Transactions</h3>
+                <p>JDBC supports transactions for executing a series of database operations as a single unit of work. You can control transactions using the <code>Connection</code> object's <code>commit()</code> and <code>rollback()</code> methods.</p>
+                <p>Example:</p>
+                <pre><code>import java.sql.Connection;
+            import java.sql.DriverManager;
+            import java.sql.SQLException;
+            
+            public class DBTransaction {
+                public static void main(String[] args) {
+                    String url = "jdbc:mysql://localhost:3306/mydatabase";
+                    String username = "username";
+                    String password = "password";
+            
+                    try {
+                        Connection connection = DriverManager.getConnection(url, username, password);
+                        connection.setAutoCommit(false); // Disable auto-commit
+                        
+                        // Perform database operations...
+                        
+                        connection.commit(); // Commit the transaction if successful
+                        connection.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+                </code></pre>
+            </div>
+            
+
+
+
+
+
+
+            </div>
+            <div class="section" id="code">
+                <h2>Practice Code Space</h2>
+                <div data-pym-src="https://www.jdoodle.com/embed/v1/ef0043ac4ca702f3"></div>
+                <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"> </script>
+                
+       </div>
+       <script src="/Page_Script/java.js"></script>
+</body>
+</html>

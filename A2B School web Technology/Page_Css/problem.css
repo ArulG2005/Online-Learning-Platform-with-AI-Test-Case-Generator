@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav {
+    background-color: green;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    position: fixed;
+    top:0; 
+    left: 0;
+    width: 100%;
+    box-sizing: border-box; 
+    z-index: 1000;
+   
+}
+#solution{
+    line-height: 50px;
+}
+.nav a{
+    text-decoration: none;
+    font-size: 2em;
+    color: white;
+}
+.fa-user {
+    color: white;
+      font-size: 2em;
+      padding-top: 10px;
+      border: 1px white solid;
+      border-radius: 100px;
+      width: 50px;
+      height: 40px;
+      text-align: center;
+}
+.App {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.top select {
+    padding: 10px;
+    font-size: 16px;
+}
+.main {
+    display: flex;
+    flex: 1;
+}
+#fetch-problem{
+    background-color: green;
+    color: white;
+    width: 80px;
+    height: 30px;
+}
+#solution-button{
+    background-color:yellow;
+    color: rgb(0, 0, 0);
+    width: 80px;
+    height: 30px;
+}
+.left {
+    flex: 1;
+    padding: 20px;
+    overflow: auto;
+    height: 85vh;
+    border-right: 1px solid #ccc;
+}
+.right {
+    overflow: auto;
+    height: 85vh;
+    flex: 1;
+    padding: 20px;
+}
+.section {
+    margin-bottom: 20px;
+}
+#jdoodle-container {
+    width: 100%;
+    height: 80%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#problemai{
+   line-height: 50px;
+}
+
+#problemai h2 {
+    /* Style for headings */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-size: 1.2em; /* Adjust font size */
+    color: blue; /* Change color */
+}
+
+#problemai p {
+    /* Style for paragraphs */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-size: 1em; /* Adjust font size */
+    color: black; /* Change color */
+}

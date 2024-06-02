@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2B</title>
+    <link rel="stylesheet" href="/Page_Css/problem.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <i class="fa-solid fa-user" id="userIcon"></i>
+            <a href="">A<sup>2</sup>B School</a>
+        </div>
+       </header> 
+       <div class="App">
+        <div class="top">
+            <div class="topic-selector">
+                <label for="topic">Select Topic:</label>
+                <select id="topic">
+                    <option value="array">Array</option>
+                    <option value="graph">Graph</option>
+                    <option value="linked-list">Linked List</option>
+                    <option value="tree">Tree</option>
+                    <option value="heap">Heap</option>
+                    <option value="hashing">Hashing</option>
+                    <option value="stack">Stack</option>
+                    <option value="queue">Queue</option>
+                    <option value="dynamic-programming">Dynamic Programming</option>
+                    <option value="backtracking">Backtracking</option>
+                </select>
+            </div>
+            <div class="language-selector">
+                <label for="language">Select Language:</label>
+                <select id="language">
+                    <option value="java">Java</option>
+                    <option value="c">C</option>
+                    <option value="cpp">C++</option>
+                    <option value="python">Python</option>
+                </select>
+            </div>
+        </div>
+        <div class="main">
+            <div class="left">
+                <div class="section" id="problem">
+                    <h2>Problem</h2>
+                    
+                    <span id="problemai"></span>
+                <div class="section" id="solution">
+                    <h2>Solution</h2>
+                    <button id="solution-button">Solution</button>
+                    <pre id="solution"></pre>
+                </div>
+                </div>
+            </div>
+            <div class="right">
+                <button id="fetch-problem">Start</button>
+                <h2>Code Space</h2>
+
+                <div id="java-snippet" class="snippet" style="display: none;">
+                    <div data-pym-src="https://www.jdoodle.com/embed/v1/ef0043ac4ca702f3"></div>
+                    <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
+                </div>
+                <div id="cpp-snippet" class="snippet" style="display: none;">
+                    <div data-pym-src="https://www.jdoodle.com/embed/v1/26fbe06c6feb37b2"></div>
+                    <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
+                </div>
+                <div id="c-snippet" class="snippet" style="display: none;">
+                    <div data-pym-src="https://www.jdoodle.com/embed/v1/d2f3d25ba61992f"></div>
+                    <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
+                </div>
+                <div id="python-snippet" class="snippet" style="display: none;">
+                    <div data-pym-src="https://www.jdoodle.com/embed/v1/39466a7c56b91c2c"></div>
+                    <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
+                </div>
+                <button onclick="compileAndRun()">Compile and Run</button>
+                <pre id="output">Output will be displayed here...</pre>
+
+            </div>
+        </div>
+    </div>
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+      </script>
+      <script type="module">
+        import { GoogleGenerativeAI } from "@google/generative-ai";
+        const API_KEY = "AIzaSyAaMJd9QTa4itVw25lc3v9dMpGfnpwq6hc";
+        const genAI = new GoogleGenerativeAI(API_KEY);
+    
+        async function fetchProblem() {
+            try {
+                const topic = document.getElementById('topic').value;
+                const lan = document.getElementById('language').value;
+    
+                const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+                const prompt = `Give ${topic} problem with testcase and time and space complexity`;
+                const result = await model.generateContent(prompt);
+                const response = await result.response;
+                const text = await response.text();
+                console.log(text);
+                const paragraphs = text.trim().split('##').filter(Boolean);
+                const formattedText = paragraphs.map(paragraph => `<p>${paragraph}</p>`).join('<br><br>');
+    
+                document.getElementById('problemai').innerHTML = formattedText;
+    
+            } catch (error) {
+                console.error('Error fetching problem data:', error);
+            }
+        }
+    
+        async function givesolution() {
+            try {
+                const language = document.getElementById('language').value;
+                const problemText = document.getElementById('problemai').textContent;
+    
+                const response = await fetchSolution(language, problemText);
+                const solution = await response.text();
+                console.log(solution);
+                document.getElementById('solution').textContent = solution;
+    
+            } catch (error) {
+                console.error('Error fetching solution:', error);
+            }
+        }
+    
+        async function fetchSolution(language, problemText) {
+    try {
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        const prompt = `Provide ${language} solution for the following problem:\n${problemText}`;
+        const result = await model.generateContent(prompt);
+        const response = await result.response;
+        return response;
+    } catch (error) {
+        console.error('Error fetching solution:', error);
+        throw error;
+    }
+}
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('fetch-problem').addEventListener('click', fetchProblem);
+            document.getElementById('solution-button').addEventListener('click', givesolution);
+        });
+    </script>
+    
+    <script src="/Page_Script/problem.js"></script>
+    
+</body>
+</html>
